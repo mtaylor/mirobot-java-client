@@ -17,6 +17,7 @@ Maven Depss
 
 Add the following deps to your pom.xml
 
+```xml
    <dependencies>
       <dependency>
          <groupId>javax.websocket</groupId>
@@ -50,7 +51,7 @@ Add the following deps to your pom.xml
       </dependency>
    </dependencies>
 </project>
-
+```
 
 Example Usage
 ==============
