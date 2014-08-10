@@ -11,10 +11,11 @@
  * permissions and limitations under the License.
  */
 
+package io.mirobot;
+
 import java.net.URISyntaxException;
 
 import io.mirobot.Exception.MirobotException;
-import io.mirobot.Mirobot;
 import io.mirobot.instruction.MoveForward;
 import io.mirobot.instruction.TurnLeft;
 import io.mirobot.pattern.Rectangle;
