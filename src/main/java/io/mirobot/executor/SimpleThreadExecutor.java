@@ -31,8 +31,11 @@ public class SimpleThreadExecutor implements Runnable, Executor, MirobotConnecti
 
    private MirobotConnection connection;
 
+   private boolean shutdownOnEmpty;
+
    public SimpleThreadExecutor(MirobotConnection connection)
    {
+      shutdownOnEmpty = false;
       drawableQueue = new ConcurrentLinkedQueue<Drawable>();
       instructionQueue = new ConcurrentLinkedQueue<Instruction>();
       this.connection = connection;
@@ -43,6 +46,11 @@ public class SimpleThreadExecutor implements Runnable, Executor, MirobotConnecti
    {
       while(true)
       {
+         if(shutdownOnEmpty && drawableQueue.isEmpty() && instructionQueue.isEmpty())
+         {
+            break;
+         }
+
          // FIXME Sending commands too quickly to Mirobot seems to cause a connection drop.
          try
          {
@@ -131,5 +139,10 @@ public class SimpleThreadExecutor implements Runnable, Executor, MirobotConnecti
    public synchronized  void removeDrawable(Drawable drawable)
    {
       drawableQueue.remove(drawable);
+   }
+
+   public void shutdownWhenEmpty(boolean shutdownOnEmpty)
+   {
+      this.shutdownOnEmpty = shutdownOnEmpty;
    }
 }

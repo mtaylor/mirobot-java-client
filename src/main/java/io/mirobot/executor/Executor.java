@@ -28,4 +28,7 @@ public interface Executor
    public void reset();
 
    public void removeDrawable(Drawable d);
+
+   public void shutdownWhenEmpty(boolean exit);
+
 }

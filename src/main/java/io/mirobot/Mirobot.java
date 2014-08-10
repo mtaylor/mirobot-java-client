@@ -53,4 +53,9 @@ public class Mirobot
    {
       // TODO
    }
+
+   public void shutdownWhenDrawingsComplete(boolean shutdown)
+   {
+      connection.getExecutor().shutdownWhenEmpty(shutdown);
+   }
 }
