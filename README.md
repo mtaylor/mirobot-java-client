@@ -1,10 +1,11 @@
 Mirobot Java Client
---------------------
+====================
 
 A Java client for controlling a Mirobot.  See http://mirobot.io for info on Mirobot.
 
 Build Instructions
-===================
+-------------------
+
 
 Install Maven.  See: http://maven.apache.org/
 
@@ -12,8 +13,8 @@ Install Maven.  See: http://maven.apache.org/
 1. cd mirobot-client directory;
 2. mvn clean install
 
-Maven Depss
-=============
+Maven Deps
+-----------
 
 Add the following deps to your pom.xml
 
@@ -54,7 +55,7 @@ Add the following deps to your pom.xml
 ```
 
 Example Usage
-==============
+--------------
 
 ```java
 import java.net.URISyntaxException;
