@@ -19,7 +19,6 @@ Maven Deps
 Add the following deps to your pom.xml
 
 ```xml
-   <dependencies>
       <dependency>
          <groupId>javax.websocket</groupId>
          <artifactId>javax.websocket-client-api</artifactId>
@@ -50,8 +49,6 @@ Add the following deps to your pom.xml
          <artifactId>mirobot-client</artifactId>
          <version>1.0-SNAPSHOT</version>
       </dependency>
-   </dependencies>
-</project>
 ```
 
 Example Usage
@@ -84,6 +81,7 @@ public class Example
       miro.connect();
 
       // Create simple instructions to move mirobot.
+      // Distances are in mm, Angles in degrees.
       MoveForward forward = new MoveForward(50);
       TurnLeft turnLeft = new TurnLeft(180);
 
